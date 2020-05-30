@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Para activar efectos de JavaScript para Menus-->
+    <script> 
+         document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+         });
+    </script>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cecy Rodríguez</title>
+    <style>
+      body{font-family: Tw Cen MT; background-color: #e3f2fd blue lighten-4; box-sizing: border-box;}
+  
+      form{
+        background-color: #e3f2fd;
+        border-radius: 3px;
+        color: #999;
+        font-size: 0.8em;
+        padding: 20px;
+        margin: 0 auto;
+        width: 500px;
+      }
+  
+      input, textarea{
+        border: 0;
+        outline: none;
+  
+        width: 280px;
+      }
+  
+      .field{
+        border: solid 1px #ccc;
+        padding: 10px;
+  
+        
+      }
+  
+      .field:focus{
+        border-color: #18A383;
+      }
+  
+      .center-content{
+        text-align: center;
+      }
+
+      #linea{
+        display: inline-block;
+      }
+  
+    </style>
+
+    <style>
+      #map {
+      height: 500px;
+      width: 100%;
+      }
+
+      #logo{
+      height: 100px;
+      
+      }
+
+      
+
+
+    </style>
+      <script>
+      function iniciarMap(){
+      var coord = {lat:21.4658313 ,lng: -101.2183787};
+      var map = new google.maps.Map(document.getElementById('map'),{
+      zoom: 10,
+      center: coord
+      });
+      var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+      });
+      }
+      </script>
+
+</head>
+<body>
+    
+    <!-- Barra de navegación-->
+    <nav class="nav-extended blue">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Cecy Rodríguez</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <!-- Menu para dispositivos móviles-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+           <img id="logo" src="imagenes/logobien.png">
+          </ul>
+        </div>
+        <div class="nav-content">
+            <!--Menu principal-->
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="#slide">Objetivo</a></li>
+            <li class="tab"><a href="#colap">Servicios</a></li>
+            <li class="tab"><a href="#card">Ubicación</a></li>
+            <li class="tab"><a href="#form">Contáctanos </a></li>
+          </ul>
+        </div>
+      </nav>
+   
+      
+      
+      <div id= slide class="slider">
+          <ul class="slides">
+            <li>
+              <img src="imagenes/guitar.jpg"> 
+              <div class="caption center-align">
+                <h3>Caló group</h3>
+                <h5 class="light grey-text text-lighten-3">Bailando, cantando, gritando.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="imagenes/descarga.jpg"> 
+              <div class="caption left-align">
+                <h3>Clases de canto</h3>
+                <h5 class="light grey-text text-lighten-3">Por Carolina Ross</h5>
+              </div>
+            </li>
+            <li>
+              <img src="imagenes/coro.jpg"> 
+              <div class="caption right-align">
+                <h3>Coro</h3>
+                <h5 class="light grey-text text-lighten-3">Generado por Cynthia Torres.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="imagenes/saxofon.jpg"> 
+              <div class="caption center-align">
+                <h3>Saxofón</h3>
+                <h5 class="light grey-text text-lighten-3">Por Henry Drum</h5>
+              </div>
+            </li>
+          </ul>
+          <span style="font-size: 20pt;" >
+            <p align="center">
+            Reclutar jóvenes talentosos para combatir síntomas de la cuarentena realizando actividades
+            como taller de coro, canto, guitarra, etc. Que contribuyan a eliminar pensamientos pesimistas, 
+            creando nuevas expectativas y mayor sentimiento de equipo.
+            </p>
+          </span>
+        </div>
+      
+      
+
+
+      <div id="colap" class="col s12">
+          <!-- Elementos colapsables -->
+        <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">videocam</i>Clases de canto viruales</div>
+              <div class="collapsible-body"><span>Cantante Silvia Rodríguez</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">queue_music</i>Clases de Saxofón</div>
+              <div class="collapsible-body"><span>Por Jorge E. Rodríguez</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">video_library</i>Tutoriales de guitarra</div>
+              <div class="collapsible-body"><span>Por Isaac Almendarez.</span></div>
+            </li>
+          </ul>
+      </div>
+      <div id="card" class="col s12"><h3 align="center">Encuentrános aquí</h3>
+        <p align="center" style="font-size:15pt;">Visítanos en calle Rivera 102, col centro. O llamános al teléfono 4281052606</p>
+        <!-- Tarjeta completa -->
+        <div id="map" class="row">
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                
+                <span class="card-title"></span>
+                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons"></i></a>-->
+              </div>
+              <div class="card-content">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="form" class="col s6">
+        <h4 align="center">Regístrate y te llamaremos pronto</h4>
+          <!--Ejemplo de formulario-->
+        <div class="row">
+            <form class="">
+              <div class="field">
+                <div class="field">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate">
+                  <label for="icon_prefix">Nombre</label>
+                </div>
+                <div class="field">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="ape" type="text" class="validate">
+                  <label for="ape">Apellido</label>
+                </div>
+                <div class="field">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+                <div class="field">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="icon_telephone" type="tel" class="validate">
+                  <label for="icon_telephone">Teléfono</label>
+                </div>
+                <div class="field">
+                  <i class="material-icons prefix">announcement</i>
+                  <textarea id= "coment" name="" id="" cols="30" rows="10"></textarea>
+                  <label for="coment">Comentario</label>
+                </div>
+                <div class="field">
+                  <p>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Canto</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Guitarra</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Saxofón</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="field">
+                  <!--<i class="material-icons right">send</i>-->
+                  <button class="btn waves-effect waves-light" id="linea"  type="submit" onclick=" return enviarFormulario();">Enviar
+                 </button>
+                </div>
+                <div class="field">
+                  <!--<i class="material-icons right">send</i>-->
+                  <button class="btn waves-effect waves-light" id="linea" type="reset">Borrar</button>
+                  
+                </div>
+              </div>
+              
+            </div>
+            </form>
+            <div id="error"></div>
+            <script src="validacion.js"></script>
+          </div>
+      </div>
+
+
+
+ <script src="https://maps.googleapis.com/maps/api/js?
+key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script> 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems);
+  });
+</script>  
+</body>
+</html>
